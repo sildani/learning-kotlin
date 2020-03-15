@@ -10,7 +10,12 @@ class IntroductionTest {
 
     @Test fun testHelloWorld() {
         val classUnderTest = Introduction()
-        assertEquals("OK", classUnderTest.start(), "start() should return \"OK\"")
+        assertEquals("OK", classUnderTest.start())
     }
-    
+
+    @Test fun testNamedArguments() {
+        val classUnderTest = Introduction()
+        assertEquals("[a, b]", classUnderTest.joinOptions(listOf("a","b")))
+    }
+
 }
