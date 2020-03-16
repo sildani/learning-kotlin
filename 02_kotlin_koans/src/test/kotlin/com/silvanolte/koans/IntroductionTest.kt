@@ -23,4 +23,10 @@ class IntroductionTest {
         assertEquals(listOf("a42","b1","C42","D2"), classUnderTest.useFoo())
     }
 
+    @Test fun testLambdas() {
+        val classUnderTest = Introduction()
+        assertEquals(true, classUnderTest.containsEven(listOf(1,2,3)))
+        assertEquals(false, classUnderTest.containsEven(listOf(1,3,5)))
+    }
+
 }

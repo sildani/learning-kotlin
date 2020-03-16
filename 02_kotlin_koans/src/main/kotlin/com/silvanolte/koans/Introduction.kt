@@ -19,4 +19,6 @@ class Introduction {
         foo(name = "d", number = 2, toUpperCase = true)
     )
 
+    fun containsEven(collection: Collection<Int>): Boolean = collection.any { i: Int -> i % 2 == 0 }
+
 }
