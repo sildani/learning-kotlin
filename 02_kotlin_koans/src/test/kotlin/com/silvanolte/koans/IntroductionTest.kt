@@ -18,4 +18,9 @@ class IntroductionTest {
         assertEquals("[a, b]", classUnderTest.joinOptions(listOf("a","b")))
     }
 
+    @Test fun testDefaultArguments() {
+        val classUnderTest = Introduction()
+        assertEquals(listOf("a42","b1","C42","D2"), classUnderTest.useFoo())
+    }
+
 }
