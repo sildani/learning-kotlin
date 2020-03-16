@@ -8,23 +8,21 @@ import kotlin.test.assertEquals
 
 class IntroductionTest {
 
+    private val classUnderTest = Introduction()
+
     @Test fun testHelloWorld() {
-        val classUnderTest = Introduction()
         assertEquals("OK", classUnderTest.start())
     }
 
     @Test fun testNamedArguments() {
-        val classUnderTest = Introduction()
         assertEquals("[a, b]", classUnderTest.joinOptions(listOf("a","b")))
     }
 
     @Test fun testDefaultArguments() {
-        val classUnderTest = Introduction()
         assertEquals(listOf("a42","b1","C42","D2"), classUnderTest.useFoo())
     }
 
     @Test fun testLambdas() {
-        val classUnderTest = Introduction()
         assertEquals(true, classUnderTest.containsEven(listOf(1,2,3)))
         assertEquals(false, classUnderTest.containsEven(listOf(1,3,5)))
     }
